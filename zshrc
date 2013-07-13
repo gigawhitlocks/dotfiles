@@ -43,9 +43,6 @@ alias zshconfig="vim ~/.zshrc"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git archlinux pip python github gitfast git-extras cabal) 
 
-autoload -U compinit
-compinit
-
 source $ZSH/oh-my-zsh.sh
 export EDITOR=gvim
 
@@ -56,9 +53,11 @@ zstyle ':completion:*' menu select
 source /usr/share/doc/pkgfile/command-not-found.zsh
 compdef -d git
 
+autoload -U compinit
+compinit
+
 alias relay='ssh ian@relay.theknown.net'
 alias lore='ssh iwhitloc@lore.cs.purdue.edu'
 alias sslab='ssh iwhitloc@sslab01.cs.purdue.edu'
-alias pacman='pacmatic'
 alias enclavesaws='ssh -i ~/.ssh/enclaves.pem ubuntu@54.218.44.14'
 alias quickhttpd='python2 -m SimpleHTTPServer 9000'
