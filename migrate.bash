@@ -34,10 +34,9 @@ if [ ${#@} -eq 0 ]; then # what the fuck, bash?
 # if one cmd line arg
 elif [ ${#@} -eq 1 ]; then
     if [ ! -e "$(pwd)/$@" ]; then
-        echo "ERROR: Trying to create a symlink to a nonexistant location"
-    else
-        symlink_dotfile $@
-    fi
+				mv $HOME/.$@ $(pwd)/$@
+		fi
+    symlink_dotfile $@
 else
     echo -e "Usage: ./migrate.bash\nRun in folder with your dotfiles"; 
 fi
