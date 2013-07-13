@@ -34,7 +34,7 @@ if [ ${#@} -eq 0 ]; then # what the fuck, bash?
 # if one cmd line arg
 elif [ ${#@} -eq 1 ]; then
     if [ ! -e "$(pwd)/$@" ]; then
-				mv $HOME/.$@ $(pwd)/$@
+			mv $HOME/.$@ $(pwd)/$@
 		fi
     symlink_dotfile $@
 else
