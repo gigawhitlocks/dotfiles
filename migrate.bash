@@ -34,8 +34,8 @@ if [ ${#@} -eq 0 ]; then # what the fuck, bash?
 # if one cmd line arg
 elif [ ${#@} -eq 1 ]; then
     if [ ! -e "$(pwd)/$@" ]; then
-			mv $HOME/.$@ $(pwd)/$@
-		fi
+	mv $HOME/.$@ $(pwd)/$@
+    fi
     symlink_dotfile $@
 else
     echo -e "Usage: ./migrate.bash\nRun in folder with your dotfiles"; 
