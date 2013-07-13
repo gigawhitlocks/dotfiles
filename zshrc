@@ -41,10 +41,24 @@ alias zshconfig="vim ~/.zshrc"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux pip python github git-extras cabal) 
+plugins=(git archlinux pip python github gitfast git-extras cabal) 
+
+autoload -U compinit
+compinit
 
 source $ZSH/oh-my-zsh.sh
 export EDITOR=gvim
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/ian/.gem/ruby/1.8/bin:/opt/nginx/sbin:/home/ian/.bash_it/plugins/available/todo:/home/ian/.cabal/bin
+
+zstyle ':completion:*' menu select
+source /usr/share/doc/pkgfile/command-not-found.zsh
+compdef -d git
+
+alias relay='ssh ian@relay.theknown.net'
+alias lore='ssh iwhitloc@lore.cs.purdue.edu'
+alias sslab='ssh iwhitloc@sslab01.cs.purdue.edu'
+alias pacman='pacmatic'
+alias enclavesaws='ssh -i ~/.ssh/enclaves.pem ubuntu@54.218.44.14'
+alias quickhttpd='python2 -m SimpleHTTPServer 9000'
