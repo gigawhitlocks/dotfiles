@@ -4,6 +4,7 @@ set mouse=a
 set number
 set backspace=indent,eol,start
 set tabstop=2
+set expandtab
 set shiftwidth=2
 set softtabstop=2
 set laststatus=2
@@ -56,7 +57,7 @@ else
 	colorscheme Mustang
 endif
 
-set guifont=Menlo\ for\ Powerline\ 9
+set guifont=Monaco\ for\ Powerline\ 9
 au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType html setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
