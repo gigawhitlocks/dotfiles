@@ -1,0 +1,10 @@
+ background no
+ out_to_console yes
+ out_to_x no
+ update_interval 2.0
+ update_interval_on_battery 10.0
+ total_run_times 0
+ use_spacer none
+ 
+ TEXT
+ ${wireless_essid wlan0} ${wireless_link_qual wlan0}% ${addr wlan0} | ${battery_short BAT1} ${battery_time BAT1} | ${time %A %m-%d-%y | %I:%M:%S %P}
