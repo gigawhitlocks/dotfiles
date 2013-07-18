@@ -34,7 +34,6 @@ URxvt*geometry:         112x22
 URxvt*urlLauncher:         /usr/bin/firefox  
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:        false
-URxvt*scrollColor:        #000000
 URxvt*unicode: true
 URxvt.locale: en_US.UTF-8
 
@@ -42,12 +41,10 @@ URxvt.imLocale: en_US.UTF-8
 URxvt*iconFile: /usr/share/pixmaps/xterm-color_48x48.xpm
 
 URxvt.transparent: true
-! URxvt.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt.shading: 30
+! 0 to 99 darkens, 101 to 200 lightens
+URxvt.shading: 15
 URxvt.perl-ext-common:  default,matcher
 URxvt.visualBell: true
-URxvt.font: xft:Monaco:regular:size=9:antialias=true:hinting=true
-URxvt.boldFont: xft:Monaco:bold:size=9:antialias=true:hinting=true
-URxvt.italicFont: xft:Monaco:italic:size=9:antialias=true:hinting=true
+urxvt*font: xft:Monaco:size=9:antialias=true:hinting=true
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
