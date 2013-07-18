@@ -141,6 +141,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	status_command conky
+  mode hide
 }
 
 focus_follows_mouse yes

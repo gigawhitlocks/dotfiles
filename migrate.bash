@@ -38,5 +38,6 @@ elif [ ${#@} -eq 1 ]; then
     fi
     symlink_dotfile $@
 else
-    echo -e "Usage: ./migrate.bash\nRun in folder with your dotfiles"; 
+    echo -e "Usage: ./migrate.bash\nWithout arguments creates symlinks to all folders in this directory in the home folder at .directory_name and if called with one argument,
+    moves ~/.argument to ./argument and creates a symlink from ~/.argument to ./argument"; 
 fi
