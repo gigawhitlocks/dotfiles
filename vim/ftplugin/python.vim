@@ -16,3 +16,7 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+" macros
+let @c='i#€kd€kl'
+let @u='€kD€kd'
