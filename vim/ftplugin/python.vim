@@ -19,4 +19,4 @@ EOF
 
 " macros
 let @c='i#€kd€kl'
-let @u='€kD€kd'
+let @u='€kdi#€kd€kl'
