@@ -170,9 +170,12 @@ exec xinput set-int-prop 13 "Evdev Wheel Emulation" 8 1
 exec xinput set-int-prop 13 "Evdev Wheel Emulation Button" 8 2
 exec xinput set-int-prop 13 "Evdev Wheel Emulation Axes" 8 6 7 4 5
 exec xinput set-ptr-feedback 13 0 175 100
-#exec xmodmap ~/.Xmodmap
 exec pulseaudio --start
 exec pactl load-module module-equalizer-sink
 exec pasystray
 exec urxvtd 
 exec xset -b
+
+
+
+# vim:filetype=i3
