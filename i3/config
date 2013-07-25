@@ -175,7 +175,7 @@ exec pactl load-module module-equalizer-sink
 exec pasystray
 exec urxvtd 
 exec xset -b
-
+exec xmodmap ~/.Xmodmap
 
 
 # vim:filetype=i3
