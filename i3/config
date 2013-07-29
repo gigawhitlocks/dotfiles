@@ -24,6 +24,7 @@ bindsym Mod1+Tab exec quickswitch.py
 
 # start a terminal
 bindsym $mod+Return exec urxvtc
+bindsym $mod+Tab exec gvim
 
 # kill focused window
 bindsym $mod+Shift+Q kill
