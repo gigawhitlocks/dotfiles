@@ -1,1 +1,5 @@
 keycode 105 = Multi_key
+keycode 66 = Escape
+clear Lock
+keycode 9 = Caps_Lock
+add Lock = Caps_Lock
