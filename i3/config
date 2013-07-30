@@ -138,6 +138,12 @@ bar {
   mode hide
 }
 
+
+# audio stuff
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute 
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
 focus_follows_mouse yes
 
 new_window 1pixel
