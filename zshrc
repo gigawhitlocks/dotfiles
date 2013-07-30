@@ -107,3 +107,21 @@ fi
 [[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
 [[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
 
+function vim() { 
+  if [ $TERM = "rxvt-unicode-256color" ]; 
+  then /usr/bin/gvim "$@";
+  else /usr/bin/vim "$@"; 
+  fi 
+}
+
+function publish() {
+	scp "$@" ian@relay.theknown.net:~/public_html/
+}
+
+function blogpost() {
+	echo -e "---\ntitle:\nlayout: post\n---" > /home/ian/thewhitlockian.github.io/_posts/`date +%Y-%m-%d`-$@.md;
+	vim /home/ian/thewhitlockian.github.io/_posts/`date +%Y-%m-%d`-"$@".md;
+}
+
+
+
