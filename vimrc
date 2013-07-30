@@ -80,3 +80,4 @@ set foldlevel=99
 
 let g:Powerline_symbols = 'fancy'
 map <leader>g :GundoToggle<CR>
+map <F12> :setlocal spell! spelllang=en_us<CR>
