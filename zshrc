@@ -45,6 +45,7 @@ plugins=(git archlinux pip python github gitfast git-extras cabal)
 
 source $ZSH/oh-my-zsh.sh
 export EDITOR=gvim
+export GOPATH="/home/ian/.gocode"
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/nginx/sbin:/home/ian/.bash_it/plugins/available/todo:/home/ian/.cabal/bin:/home/ian/.gem/ruby/2.0.0/bin/
