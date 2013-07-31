@@ -62,13 +62,14 @@ alias lore='ssh iwhitloc@lore.cs.purdue.edu'
 alias sslab='ssh iwhitloc@sslab01.cs.purdue.edu'
 alias enclavesaws='ssh -i ~/.ssh/enclaves.pem ubuntu@54.218.44.14'
 alias quickhttpd='python2 -m SimpleHTTPServer 9000'
+alias ll="ls -lh"
+alias cvim="/usr/bin/vim"
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key
 
 key[Home]=${terminfo[khome]}
-
 key[End]=${terminfo[kend]}
 key[Insert]=${terminfo[kich1]}
 key[Delete]=${terminfo[kdch1]}

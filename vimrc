@@ -47,7 +47,8 @@ endif
 
 
 if has("gui_running")
-	colorscheme summerfruit256
+"	colorscheme summerfruit256
+  colorscheme	sweyla466858
 	highlight OverLength ctermbg=red ctermfg=white guibg=#FF99CC
 	match OverLength /\%81v.\+/
         set guioptions-=m  "remove menu bar
