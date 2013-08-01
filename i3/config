@@ -154,10 +154,17 @@ new_window 1pixel
 #client.unfocused        #002B36 #002B36 #888888 #292d2e
 #client.urgent           #DC322F #DC322F #586E75 #DC322F
 
-client.focused          #B58900 #B58900 #FDF6E3 #2AA198
-client.focused_inactive #268BD2 #268BD2 #EEE8D5 #484e30
-client.unfocused        #002B36 #002B36 #93A1A1 #002B36
-client.urgent           #CB4B16 #CB4B16 #FDF6E3 #DC322F
+# solarized
+#client.focused          #B58900 #B58900 #FDF6E3 #2AA198
+#client.focused_inactive #268BD2 #268BD2 #EEE8D5 #484e30
+#client.unfocused        #002B36 #002B36 #93A1A1 #002B36
+#client.urgent           #CB4B16 #CB4B16 #FDF6E3 #DC322F
+
+# matches current vim scheme
+client.focused           #FAFFFF #FAFFFF #000000 #516D7B
+client.focused_inactive  #B4B8B8 #B4B8B8 #000000 #B4B8B8
+client.unfocused         #000000 #000000 #B4B8B8 #B4B8B8
+client.urgent            #AB2C41 #AB2C41 #FAFFFF #AB2C41 
 
 exec xrdb -merge ~/.Xresources && nm-applet &
 exec feh --bg-scale $background &

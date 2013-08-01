@@ -1,31 +1,31 @@
-*background: #333333
-*foreground: #eeeeee
+*background: #FAFFFF
+*foreground: #000000
 
 ! Default
 ! 0: black
-*color0:  #222222
-*color8:  #222222
+*color0:  #000000
+*color8:  #000000
 ! 1: red
-*color1:  #9f6767
-*color9:  #9f6767
+*color1:  #D90B2D
+*color9:  #D90B2D
 ! 2: green
-*color2:  #92ac68
-*color10: #92ac68
+*color2:  #076D08
+*color10: #076D08
 ! 3: yellow
-*color3:  #d0d293
-*color11: #d0d293
+*color3:  #534600
+*color11: #534600
 ! 4: blue
-*color4:  #9aacc3
-*color12: #9aacc3
+*color4:  #000084
+*color12: #000084
 ! 5: magenta
-*color5:  #bb77a4
-*color13: #bb77a4
+*color5:  #AB2C41
+*color13: #AB2C41
 ! 6: cyan
-*color6:  #77bbb5
-*color14: #77bbb5
+*color6:  #004A62
+*color14: #004A62
 ! 7: white
-*color7:  #FFFFFF
-*color15: #FFFFFF
+*color7:  #FAFFFF
+*color15: #FAFFFF
 
 !------------------------------------------------------------------------------
 ! u r x v t
