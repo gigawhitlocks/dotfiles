@@ -58,7 +58,7 @@ else
 	colorscheme Mustang
 endif
 
-set guifont=Monaco\ for\ Powerline\ 9
+set guifont=Monaco\ for\ Powerline\ 9 
 au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
 au FileType html setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
@@ -71,9 +71,9 @@ set completeopt=menuone,longest,preview
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=1
 
-let g:syntastic_mode_map = { 'mode': 'active',
-                            \ 'active_filetypes': [],
-                            \ 'passive_filetypes': ['haskell'] }
+let g:syntastic_mode_map = { 'mode': 'passive',
+                            \ 'active_filetypes': ['python'],
+                            \ 'passive_filetypes': ['haskell','go'] }
 
 
 set foldmethod=indent
@@ -82,3 +82,6 @@ set foldlevel=99
 let g:Powerline_symbols = 'fancy'
 map <leader>g :GundoToggle<CR>
 map <F12> :setlocal spell! spelllang=en_us<CR>
+
+imap <F4> <Esc>:SyntasticCheck<CR>
+nmap <F4> <Esc>:SyntasticCheck<CR>
