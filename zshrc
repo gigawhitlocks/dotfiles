@@ -64,6 +64,8 @@ alias enclavesaws='ssh -i ~/.ssh/enclaves.pem ubuntu@54.218.44.14'
 alias quickhttpd='python2 -m SimpleHTTPServer 9000'
 alias ll="ls -lh"
 alias cvim="/usr/bin/vim"
+alias :wq="exit"
+alias :q="exit"
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
