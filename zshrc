@@ -123,7 +123,7 @@ function publish() {
 }
 
 function blogpost() {
-	echo -e "---\ntitle:\nlayout: post\n---" > /home/ian/thewhitlockian.github.io/_posts/`date +%Y-%m-%d`-$@.md;
+	echo -e "---\ntitle:\nlayout: post\n---" > /home/ian/thewhitlockian.github.io/_posts/`date +%Y-%m-%d`-"$@".md;
 	vim /home/ian/thewhitlockian.github.io/_posts/`date +%Y-%m-%d`-"$@".md;
 }
 
