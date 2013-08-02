@@ -1,3 +1,71 @@
 [submodule "vim/bundle/Command-T"]
 	path = vim/bundle/Command-T
 	url = git@github.com:wincent/Command-T.git
+
+[submodule "vim/bundle/auto-pairs"]
+path = vim/bundle/auto-pairs
+url = git://github.com/jiangmiao/auto-pairs.git
+
+[submodule "vim/bundle/Colour-Sampler-Pack"]
+path = vim/bundle/Colour-Sampler-Pack
+url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
+
+[submodule "vim/bundle/gundo.vim"]
+path = vim/bundle/gundo.vim
+url = https://github.com/sjl/gundo.vim.git
+
+[submodule "vim/bundle/haskellConceal"]
+path = vim/bundle/haskellConceal
+url = https://github.com/Twinside/vim-haskellConceal
+
+[submodule "vim/bundle/hasksyn"]
+path = vim/bundle/hasksyn
+url = git://github.com/travitch/hasksyn.git
+
+[submodule "vim/bundle/neco-ghc"]
+path = vim/bundle/neco-ghc
+url = git@github.com:ujihisa/neco-ghc.git
+
+[submodule "vim/bundle/nerdtree"]
+path = vim/bundle/nerdtree
+url = https://github.com/scrooloose/nerdtree.git
+
+[submodule "vim/bundle/numbers"]
+path = vim/bundle/numbers
+url = https://github.com/myusuf3/numbers.vim.git
+
+[submodule "vim/bundle/powerline"]
+path = vim/bundle/powerline
+url = https://github.com/Lokaltog/powerline.git
+
+[submodule "vim/bundle/pydoc.vim"]
+path = vim/bundle/pydoc.vim
+url = https://github.com/fs111/pydoc.vim.git
+
+[submodule "vim/bundle/pyflakes-pathogen"]
+path = vim/bundle/pyflakes-pathogen
+url = https://github.com/mitechie/pyflakes-pathogen.git
+
+[submodule "vim/bundle/supertab"]
+path = vim/bundle/supertab
+url = https://github.com/ervandew/supertab.git
+
+[submodule "vim/bundle/syntastic"]
+path = vim/bundle/syntastic
+url = https://github.com/scrooloose/syntastic.git
+
+[submodule "vim/bundle/vim-fugitive"]
+path = vim/bundle/vim-fugitive
+url = git://github.com/tpope/vim-fugitive.git
+
+[submodule "vim/bundle/vim-hdevtools"]
+path = vim/bundle/vim-hdevtools
+url = https://github.com/bitc/vim-hdevtools.git
+
+[submodule "vim/bundle/vim-markdown"]
+path = vim/bundle/vim-markdown
+url = git@github.com:tpope/vim-markdown.git
+
+[submodule "vim/bundle/vim-surround"]
+path = vim/bundle/vim-surround
+url = git://github.com/tpope/vim-surround.git
