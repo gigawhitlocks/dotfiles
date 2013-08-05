@@ -176,7 +176,7 @@ exec xinput set-ptr-feedback 13 0 175 100
 exec pulseaudio --start
 exec pactl load-module module-equalizer-sink
 exec urxvtd -q -o -f
-exec xset -b off
+exec xset b off
 exec setxkbmap -model us104 -layout us -option compose:rctrl -variant altgr-intl -option lv3:ralt_switch
 exec xmodmap ~/.Xmodmap
 exec xcape -e 'Super_L=Escape'
