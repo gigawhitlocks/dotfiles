@@ -18,5 +18,11 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 " macros
+" comment line
 let @c='i#€kd€kl'
+" uncomment line
 let @u='€kdi#€kd€kl'
+
+" enforce 80 character line len
+match OverLength /\%81v.\+/
+

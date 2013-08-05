@@ -50,10 +50,9 @@ if has("gui_running")
 "	colorscheme summerfruit256
   colorscheme	sweyla466858
 	highlight OverLength ctermbg=red ctermfg=white guibg=#FF99CC
-	match OverLength /\%81v.\+/
-        set guioptions-=m  "remove menu bar
-        set guioptions-=T  "remove toolbar
-        set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
 else
 	colorscheme Mustang
 endif
