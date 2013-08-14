@@ -134,7 +134,6 @@ function blogpost() {
 
 function pathogen() {
   cd ~/dotfiles;
-  name=$(python -c "print(\""$@"\".split(\"/\")[4])");
-  git submodule add "$@" ~/dotfiles/vim/bundle/$name;
+  git submodule add "$@" vim/bundle/$(echo "$@" | cut -d/ -f5);
   cd - > /dev/null;
 }
