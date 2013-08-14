@@ -5,6 +5,7 @@ au FileType python set omnifunc=pythoncomplete#Complete
 "let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionType = "<c-Space>"
 set completeopt=menuone,longest,preview
+let g:jedi#show_function_definition = "0"
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
