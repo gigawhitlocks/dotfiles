@@ -8,7 +8,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set laststatus=2
-set shell=/usr/bin/bash
+set shell=/bin/bash
 call pathogen#infect() 
 syntax on
 filetype plugin indent on

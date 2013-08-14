@@ -3,7 +3,7 @@ set $background /home/ian/.wallpaper-now.png
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:DejaVuSans 10
+font pango:Monaco 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -84,10 +84,10 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+at move container to workspace 2
-bindsym $mod+Shift+numbersign move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+percent move container to workspace 5
 bindsym $mod+Shift+asciicircum move container to workspace 6
 bindsym $mod+Shift+ampersand move container to workspace 7
@@ -177,7 +177,7 @@ exec pulseaudio --start
 exec pactl load-module module-equalizer-sink
 exec urxvtd -q -o -f
 exec xset b off
-exec setxkbmap -model us104 -layout us -option compose:rctrl -variant altgr-intl -option lv3:ralt_switch
+#exec setxkbmap -model us104 -layout us -option compose:rctrl -variant altgr-intl -option lv3:ralt_switch
 exec xmodmap ~/.Xmodmap
 exec xcape -e 'Super_L=Escape'
 

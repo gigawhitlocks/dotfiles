@@ -41,10 +41,8 @@ URxvt.imLocale: en_US.UTF-8
 URxvt*iconFile: /usr/share/pixmaps/xterm-color_48x48.xpm
 
 URxvt.transparent: false
-! 0 to 99 darkens, 101 to 200 lightens
-URxvt.shading: 15
-URxvt.perl-ext-common:  default,matcher
 URxvt.visualBell: true
 urxvt*font: xft:Monaco:size=9:antialias=true:hinting=true
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
+URxvt.cursorColor: #000000
