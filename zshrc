@@ -137,3 +137,4 @@ function pathogen() {
   git submodule add "$@" vim/bundle/$(echo "$@" | cut -d/ -f5);
   cd - > /dev/null;
 }
+

@@ -2,7 +2,8 @@ map! <buffer> <F5> <Esc>:w<CR>:!./% <CR>
 map <buffer> <F5> <Esc>:w<CR>:!./% <CR>
 
 au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "<c-Space>"
 set completeopt=menuone,longest,preview
 
 " Add the virtualenv's site-packages to vim path
