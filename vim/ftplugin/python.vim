@@ -5,7 +5,6 @@ au FileType python set omnifunc=pythoncomplete#Complete
 "let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabDefaultCompletionType = "<c-Space>"
 set completeopt=menuone,longest,preview
-let g:jedi#show_function_definition = "0"
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
@@ -21,10 +20,11 @@ EOF
 
 " macros
 " comment line
-let @c='i#€kd€kl'
+let @c='^i#€kd€kl'
 " uncomment line
-let @u='€kdi#€kd€kl'
+let @u='^€kdi#€kd€kl'
 
 " enforce 80 character line len
 match OverLength /\%81v.\+/
+let g:syntastic_python_checkers = ['python']
 
