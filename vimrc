@@ -58,7 +58,7 @@ else
 endif
 
 set guifont=Monaco\ for\ Powerline\ 9 
-au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4
+au FileType python setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 au FileType html setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
@@ -84,3 +84,7 @@ map <F12> :setlocal spell! spelllang=en_us<CR>
 
 imap <F4> <Esc>:SyntasticCheck<CR>
 nmap <F4> <Esc>:SyntasticCheck<CR>
+
+
+let g:ycm_autoclose_preview_window_after_completion=1
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
