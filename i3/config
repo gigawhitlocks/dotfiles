@@ -3,7 +3,7 @@ set $background /home/ian/.wallpaper-now.png
 
 # font for window titles. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font pango:Monaco 9
+font pango:DejaVu Sans 8 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -135,7 +135,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 	status_command conky
-  mode hide
 }
 
 
@@ -166,8 +165,8 @@ client.focused_inactive  #B4B8B8 #B4B8B8 #000000 #B4B8B8
 client.unfocused         #000000 #000000 #B4B8B8 #B4B8B8
 client.urgent            #AB2C41 #AB2C41 #FAFFFF #AB2C41 
 
-exec xrdb -merge ~/.Xresources && nm-applet &
-exec feh --bg-scale $background &
+
+
 exec xinput --set-prop --type=int --format=8 12 "Device Enabled" 0
 exec xinput set-int-prop 13 "Evdev Wheel Emulation" 8 1
 exec xinput set-int-prop 13 "Evdev Wheel Emulation Button" 8 2
@@ -177,9 +176,9 @@ exec pulseaudio --start
 exec pactl load-module module-equalizer-sink
 exec urxvtd -q -o -f
 exec xset b off
-#exec setxkbmap -model us104 -layout us -option compose:rctrl -variant altgr-intl -option lv3:ralt_switch
 exec xmodmap ~/.Xmodmap
 exec xcape -e 'Super_L=Escape'
-
-
+exec nm-applet
+exec xrdb -merge ~/.Xresources
+exec feh --bg-tile ~/subtle_carbon.png
 # vim:filetype=i3
