@@ -103,7 +103,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # lock screen
-bindsym $mod+x exec i3lock -i $background
+bindsym $mod+x exec i3lock -c 333333 
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -180,5 +180,5 @@ exec xmodmap ~/.Xmodmap
 exec xcape -e 'Super_L=Escape'
 exec nm-applet
 exec xrdb -merge ~/.Xresources
-exec feh --bg-tile ~/subtle_carbon.png
+exec feh --bg-scale $background
 # vim:filetype=i3
