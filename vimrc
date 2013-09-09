@@ -93,4 +93,6 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
-autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
+au BufReadPost *.rkt,*.rktl set filetype=racket
+au filetype racket set lisp
+au filetype racket set autoindent
