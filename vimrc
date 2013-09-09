@@ -57,7 +57,25 @@ else
 	colorscheme Mustang
 endif
 
-set guifont=Monaco\ for\ Powerline\ 9 
+set guifont=Monaco\ For\ Powerline\ 9
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste'],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': '', 'right': '' }
+      \ }
 au FileType python setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 au FileType html setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
@@ -78,13 +96,14 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 set foldmethod=indent
 set foldlevel=99
 
-let g:Powerline_symbols = 'fancy'
 map <leader>g :GundoToggle<CR>
 map <F12> :setlocal spell! spelllang=en_us<CR>
 
 imap <F4> <Esc>:SyntasticCheck<CR>
 nmap <F4> <Esc>:SyntasticCheck<CR>
 
-
 let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
+autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
