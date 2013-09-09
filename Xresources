@@ -46,3 +46,17 @@ urxvt*font: xft:Monaco:size=9:antialias=true:hinting=true
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 URxvt.cursorColor: #000000
+
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.rgba: rgb
+
+
+dzen2.font:       -*-fixed-*-*-*-*-*-*-*-*-*-*-*-*
+dzen2.foreground: #22EE11
+dzen2.background: black
