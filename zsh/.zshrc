@@ -57,13 +57,6 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.cask/bin/$PATH
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='vim'
- fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -79,17 +72,6 @@ if [[ -n $SSH_CONNECTION ]]; then
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias relay='ssh ian@relay.theknown.net'
-alias dev="ssh ubuntu@dev.isw.scratch.badpkt.com"
-function publish() {
-	scp "$@" -i ~/.ssh/id_hashbang -a giggles@hashbang.sh:~/public_html/
-}
-
-function blogpost() {
-	echo -e "---\ntitle:\nlayout: post\n---" > ~/gigawhitlocks.github.io/_posts/`date +%Y-%m-%d`-"$@".md;
-	vim !$;
-}
-
 typeset -A key
 
 key[Home]=${terminfo[khome]}
@@ -124,14 +106,4 @@ function ec () {
 
 function venv () {
     source ~/.virtualenvs/$1/bin/activate
-}
-function watvenv () {
-    cd /opt/juniper/src/$1;
-    virtualenv $1 -p /usr/bin/python3.4
-    [[ -d ~/.virtualenvs ]] || mkdir ~/.virtualenvs
-    ln -s /opt/juniper/src/$1/$1 ~/.virtualenvs/$1
-    venv $1
-    pip install ipython
-    pip install .
-    popd
 }
