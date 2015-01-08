@@ -41,6 +41,7 @@
 	     :init (evil-mode 1)
 	     :ensure evil)
 
+;; kj to exit insert mode in evil-mode
 (define-key evil-insert-state-map "k" #'cofi/maybe-exit)
 (evil-define-command cofi/maybe-exit ()
   :repeat change
