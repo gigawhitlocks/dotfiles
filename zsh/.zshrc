@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colorize color-man autojump python pip themes history)
-. /usr/share/autojump/autojump.sh
+. /etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
