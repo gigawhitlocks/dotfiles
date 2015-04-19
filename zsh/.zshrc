@@ -45,7 +45,11 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git colorize color-man autojump python pip themes history)
-. /etc/profile.d/autojump.sh
+
+## Some shit for autojump, holy hell
+[[ -s /home/zuul/.autojump/etc/profile.d/autojump.sh ]] && source /home/zuul/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+## end autojump lines
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,3 +111,6 @@ function ec () {
 function venv () {
     source ~/.virtualenvs/$1/bin/activate
 }
+
+function c() { history | tail -n1 | head -n1 | cut -d' ' -f3- >> /home/zuul/joe/session && tail /home/zuul/joe/session; }
+-
