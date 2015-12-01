@@ -31,9 +31,14 @@
      c-c++
      google-c-style
      themes-megapack
-     java
      howdoi
+     java
      ranger
+     restclient
+     gtags
+     go
+     jabber
+     spell-checking
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -171,13 +176,22 @@ layers configuration."
   (setq ns-right-alternate-modifier nil)
   (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
   (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+  (setq-default dotspacemacs-configuration-layers
+                '((c-c++ :variables
+                         c-c++-default-mode-for-headers 'c++-mode)))
 
+  (spacemacs|defvar-company-backends go-mode)
   ;; config for eclim (java layer)
   (setq eclim-eclipse-dirs '("/Applications/Eclipse.app/Contents/Eclipse"))
   (setq eclim-executable "/Applications/Eclipse.app/Contents/Eclipse/eclim")
   (require 'eclimd)
   (setq eclimd-wait-for-process nil)
-  (setq eclimd-default-workspace "~/Documents/workspace")
+  (setq eclimd-default-workspace "/Users/iwhitlock/workspace")
+
+  (setq multi-term-program "/bin/zsh")
+  (require 'compile)
+
+  (add-hook 'dired-mode-hook 'deer)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
