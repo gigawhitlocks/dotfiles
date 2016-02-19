@@ -17,34 +17,40 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
-     better-defaults
-     emacs-lisp
-     git
-     markdown
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     syntax-checking
-     version-control
-     colors
+     auto-completion
+     better-defaults
      c-c++
+     (colors :variables
+              colors-enable-nyan-cat-progress-bar (display-graphic-p))
+     dockerfile
+     emacs-lisp
+     erc
+     git
+     github
+     go
      google-c-style
-     themes-megapack
-     howdoi
-     java
+     gtags
+     jabber
+     markdown
+     python
      ranger
      restclient
-     gtags
-     go
-     jabber
+     search-engine
      spell-checking
+     syntax-checking
+     themes-megapack
+     version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(go-projectile
+                                      howdoi
+                                      govc)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -78,8 +84,8 @@ before layers configuration."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
 
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(leuven
-                         spacemacs-light
+   dotspacemacs-themes '(spacemacs-light
+                         leuven
                          spacemacs-dark
                          dichromacy
                          twilight-bright
@@ -90,7 +96,7 @@ before layers configuration."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 10
+                               :size 11
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -173,6 +179,8 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (setenv "GOPATH" "/home/ian/go")
+  (setenv "PATH" (concat (getenv "GOPATH") "/bin:" (getenv "PATH")))
   (setq ns-right-alternate-modifier nil)
   (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
   (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
@@ -181,17 +189,49 @@ layers configuration."
                          c-c++-default-mode-for-headers 'c++-mode)))
 
   (spacemacs|defvar-company-backends go-mode)
-  ;; config for eclim (java layer)
-  (setq eclim-eclipse-dirs '("/Applications/Eclipse.app/Contents/Eclipse"))
-  (setq eclim-executable "/Applications/Eclipse.app/Contents/Eclipse/eclim")
-  (require 'eclimd)
-  (setq eclimd-wait-for-process nil)
-  (setq eclimd-default-workspace "/Users/iwhitlock/workspace")
 
   (setq multi-term-program "/bin/zsh")
   (require 'compile)
 
   (add-hook 'dired-mode-hook 'deer)
+  (defun gif-emacs (duration)
+    (interactive "sDuration: ")
+    (start-process "emacs-to-gif" nil
+                   "byzanz-record"
+                   "-d" duration
+                   "-w" (number-to-string (+ 5 (frame-pixel-width)))
+                   "-h" (number-to-string (+ 50 (frame-pixel-height)))
+                   "-x" (number-to-string (frame-parameter nil 'left))
+                   "-y" (number-to-string (+ (frame-parameter nil 'top) 10))
+                   (concat "~/emacs_gifs/" (format-time-string "%Y-%m-%dT%T") ".gif")))
+
+  ;; following defines super + +,=, and - as global font size changer keys
+  ;; when global-text-scale-mode is active
+  ;; I'm going to leave it off by default since this is only useful sometimes
+  (define-globalized-minor-mode
+    global-text-scale-mode
+    text-scale-mode
+    (lambda () (text-scale-mode 1)))
+
+  (defun global-text-scale-adjust (inc) (interactive)
+         (text-scale-set 1)
+         (kill-local-variable 'text-scale-mode-amount)
+         (setq-default text-scale-mode-amount (+ text-scale-mode-amount inc))
+         (global-text-scale-mode 1))
+  (global-set-key (kbd "s-0") '(lambda () (interactive)
+                                 (global-text-scale-adjust (- text-scale-mode-amount))
+                                 (global-text-scale-mode -1)))
+  (global-set-key (kbd "s-+") '(lambda () (interactive) (global-text-scale-adjust 1)))
+  (global-set-key (kbd "s-=") '(lambda () (interactive) (global-text-scale-adjust 1)))
+  (global-set-key (kbd "s--") '(lambda () (interactive) (global-text-scale-adjust -1)))
+;;  (setq browse-url-browser-function 'eww-browse-url)
+
+  ;; this colorizes ANSI escape codes in the compilation buffer
+  (require 'ansi-color)
+  (defun colorize-compilation-buffer ()
+    (let ((inhibit-read-only t))
+      (ansi-color-apply-on-region (point-min) (point-max))))
+  (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
