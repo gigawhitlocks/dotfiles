@@ -95,9 +95,6 @@ url = git://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/vim-racket"]
 	path = vim/bundle/vim-racket
 	url = https://github.com/wlangstroth/vim-racket
-[submodule "emacs.d/i3-emacs"]
-	path = emacs.d/i3-emacs
-	url = https://github.com/vava/i3-emacs
 [submodule "spacemacs_layers"]
 	path = spacemacs_layers
 	url = https://github.com/gigawhitlocks/spacemacs_layers.git
